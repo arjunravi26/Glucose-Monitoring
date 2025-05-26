@@ -80,8 +80,8 @@ We use **XGBoost Regressor**, a powerful gradient boosting model suitable for ta
 
 | Metric | Description             | Example Value |
 | ------ | ----------------------- | ------------- |
-| MAE    | Mean Absolute Error     | 1.25          |
-| RMSE   | Root Mean Squared Error | 2.18          |
+| MAE    | Mean Absolute Error     | 1.01          |
+| RMSE   | Root Mean Squared Error | 1.65          |
 
 These metrics help us assess the model's performance and its deviation from true glucose values.
 
