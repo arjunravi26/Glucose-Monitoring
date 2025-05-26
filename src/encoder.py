@@ -52,7 +52,6 @@ def transform_with_encoders(
                 logger.warning(f"Column '{col}' not in new DataFrame; skipping transform.")
             continue
         try:
-            logger.info(f"Classes in encoders: {print(le.classes_)}")
             out[col] = le.transform(out[col].astype(str))
         except Exception as e:
             logger.error(f"Failed to transform column '{col}': {e}")

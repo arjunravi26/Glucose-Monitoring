@@ -26,7 +26,6 @@ def validate_input(data: Union[List[float], np.ndarray], expected_features: int)
     """
     Validates and reshapes input data for prediction.
     """
-    print(data)
     if isinstance(data, list):
         data = np.array(data)
 
@@ -50,22 +49,3 @@ def predict(input_data: Union[List[float], np.ndarray], expected_features: int):
     except Exception as e:
         logger.error(f"Prediction failed: {e}")
         raise
-
-if __name__ == "__main__":
-    # Path to saved model
-    MODEL_PATH = "xgboost_model.pkl"
-
-    # Load the model
-    model = load_model(MODEL_PATH)
-
-    # Define expected number of features (must match training!)
-    EXPECTED_FEATURES = 4
-
-    # Example user input (replace this with dynamic input or data pipeline)
-    user_input = [5.1, 3.5, 1.4, 0.2]
-
-    try:
-        result = predict(model, user_input, EXPECTED_FEATURES)
-        print("✅ Predicted value:", result)
-    except Exception as e:
-        print("❌ Prediction error:", str(e))
