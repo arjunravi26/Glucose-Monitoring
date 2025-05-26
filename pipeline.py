@@ -22,7 +22,7 @@ def inference_pipeline(data):
         data = handle_null(data)
 
         logger.info("🔹 Loading encoders")
-        encoders = load_encoders(filepath='models/encoders.pkl')
+        encoders = load_encoders(filepath='Models/encoders.pkl')
 
         logger.info("🔹 Transforming data using encoders")
         data_encoded = transform_with_encoders(data, encoders)
